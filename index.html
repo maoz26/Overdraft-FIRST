@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="he" dir="RTL">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content='initial-scale=1,maximum-scale=1,user-scalable=no'> 
+
+        <title>Overdraft</title>
+
+        <!-- // <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+        <!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>  -->
+        <!-- // <script type="text/javascript" src="includes/waypoint.js"></script> -->
+        <script src="includes/jquery-1.11.3.min.js"></script>
+        <script src="includes/d3.min.js"></script>
+        <script src='https://api.mapbox.com/mapbox.js/v2.2.3/mapbox.js'></script>
+        <link href='https://api.mapbox.com/mapbox.js/v2.2.3/mapbox.css' rel='stylesheet'>
+        <script type="text/javascript" src="includes/TypingText.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/noframework.waypoints.min.js"></script>
+
+<!--         // <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+        // <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script> -->
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+
+        <script type="text/javascript" src="includes/javascriptTiming.js"></script>
+        <script type="text/javascript" src="includes/javascriptDebtGraph.js"></script>
+        <script src="includes/loadData.js"></script>
+        <link rel="stylesheet" href="includes/style.css">
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <div id="gif_background"></div>
+
+            <!-- Frame 1 - counter -->
+            <h1 id="debt_h1">חוב משקי הבית</h1>
+            <section id="counter"></section>
+            <h2 id="frame1_h2">למה המספר הזה אמור להדאיג אותנו?</h2>
+            <section id="start_roll"></section>
+
+            <!-- Frame 2 - debts graph-->
+            <section id="debtSumGraph">
+                <script> CreateDynamicDebtsGraph(); </script>
+            </section>
+
+            <!-- Frame 3 - animation -->
+            <h1 id="not_bad_h1">חוב הוא לא בהכרח דבר רע<br>
+                הצמיחה הכלכלית מבוססת על חובות<h1>
+            <section id="circleGIF"></section>
+
+
+            <!-- Frame 4 - map graph-->
+            <div id="map_frame">
+                <div id="map_container">
+                    <div id='map'> </div>
+                    <script src="includes/map.js"> </script>
+                </div>
+                <div id="map_graph"> </div>
+                <script> (function() { loadData('map_graph');} ) (); </script>
+            </div>
+
+            <!-- Frame 5 - counter again -->
+            <section id="counter_again"></section>
+            
+        </div>
+    </body>
+
+    <script>
+        writingFunctions();
+        waypointFunctions();     
+    </script>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

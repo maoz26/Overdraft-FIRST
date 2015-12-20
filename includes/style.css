@@ -1,0 +1,205 @@
+* { margin:0; padding:0; }
+
+article, section, main, nav, aside, footer, header {
+	display:block;
+}
+
+
+/*********************** Installing fonts **************************/
+
+@font-face {
+    font-family: "barlev-aaa-light";
+    src: url(../fonts/barlev-aaa-light.otf); format("truetype");
+}
+
+@font-face {
+    font-family: "barlev-aaa-regular";
+    src: url(../fonts/barlev-aaa-regular.otf); format("truetype");
+}
+
+@font-face {
+    font-family: "barlev-aaa-bold";
+    src: url(../fonts/barlev-aaa-bold.otf); format("truetype");
+}
+
+/**************************** General ******************************/
+
+h1, h2, p {
+  font-family: "barlev-aaa-light"; 
+  color: #ffffff; 
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px; 
+}
+
+h2 {
+  font-size: 40px; 
+}
+
+
+/************************** Background *****************************/
+
+body {
+  background-color: black;
+  z-index: -5; /* always behind */
+  /*overflow: hidden;*/
+}
+
+#gif_background {
+  background: url(../pictures/holeGif.gif) no-repeat;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 200%; /* we can change that */
+  top: 0;
+  left: 0;
+  z-index: -4; /* before tha black background */
+}
+
+/**************************** Counter ******************************/
+
+#debt_h1 {
+  padding-top: 150px;    
+  font-size: 70px;             
+}
+
+#counter {
+  font-family: "barlev-aaa-regular"; 
+  font-size: 130px;   
+  text-align: center;
+  padding-top: 25px;                 
+  position: relative;
+  color: #ffffff; 
+}
+
+#frame1_h2 {
+  padding-top: 40px;                  
+  visibility: hidden;
+}
+
+#start_roll {
+  background-image: url(../pictures/roll_down_icon.png); 
+  background-size: cover; 
+  background-repeat:no-repeat;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  top: 20px;                         
+  margin: auto;
+  visibility: hidden;
+}
+
+/********************** Page 2 - debts graph ************************/
+ 
+#debtSumGraph {
+  font: 16px sans-serif;
+  font-weight: lighter;
+  position: relative;
+  margin: auto;
+  top: 250px;
+  width: 700px;
+  height: 450px;
+}
+
+
+/********************** Page 3 - not so bad ************************/
+
+#not_bad_h1 {
+  position: relative;
+  padding-top: 400px;                 
+  text-align: center;
+  top: 80px;
+}
+
+#circleGIF {     
+  background-image: url(../pictures/circleGIF.gif); 
+  background-size: cover;
+  position: relative;
+  width: 600px;
+  height: 400px;
+  top: 50px;   
+  margin: auto;
+  visibility: hidden;
+}
+
+/********************** Page 4 - map graph ************************/
+
+#map_frame {
+    font: 10px sans-serif;
+    width:1200px;
+    margin: 0px auto;
+    top: 250px;         /*  */
+    position: relative; /*  */
+}
+
+#map_frame > div {
+    display: inline-block;
+}
+
+#map_container {
+  width: 400px;
+  height: 550px;      /* 600 */
+  position: relative;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#map_graph {
+  /*background-color: black;*/
+  width: 700px;
+  height: 400px;
+  /*margin-left:40px;*/
+  margin-top: 100px;
+  /*position: absolute;*/
+}
+
+/*debts.html page*/
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.x.axis path {
+  display: none;
+}
+
+
+/********************** Page 5 - counter again ************************/
+
+#counter_again {
+  margin: auto;
+  position: relative;
+  font-size: 130px; 
+  font-family: "barlev-aaa-light"; 
+  color: #ffffff; 
+  width: 600px;
+  height: 400px;
+  top: 600px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
